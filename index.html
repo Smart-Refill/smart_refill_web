@@ -99,6 +99,10 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:#3
 .faq details[open] summary::after{content:"\2013"}.faq details p{color:var(--muted);margin-top:10px;max-width:62ch}
 .soc{display:inline-flex;align-items:center;gap:10px}
 .vplay img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.vplay::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(51,14,66,.1),rgba(51,14,66,.55));transition:opacity .2s}.vplay:hover::after{opacity:.7}.vplay svg,.vplay span{position:relative;z-index:1}
+dialog#vmodal{border:0;padding:0;background:transparent;width:min(960px,92vw);max-width:none;overflow:visible;color:#fff}
+dialog#vmodal::backdrop{background:rgba(20,5,28,.84);backdrop-filter:blur(4px)}
+.vframe{aspect-ratio:16/9;background:#000;border-radius:16px;overflow:hidden}.vframe iframe{width:100%;height:100%;border:0;display:block}
+.vclose{position:absolute;top:-52px;right:0;width:44px;height:44px;border-radius:50%;border:0;background:#5ce1e6;color:#330e42;font:700 1.5rem/1 var(--head);cursor:pointer}.vclose:hover{background:#8aeef1}
 /* machines */
 .machines{background:var(--sage)}
 .m-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
@@ -341,7 +345,7 @@ footer li a{text-decoration:none;color:rgba(255,255,255,.72)}footer li a:hover{c
 <section class="story" id="story"><div class="wrap"><div class="col">
 <h2>We believe better choices should be easier choices.</h2>
 <p>Smart Refill uses technology to make refilling as natural and convenient as buying new. We’re building a future where the bottle you already own is the only one you need.</p>
-<a class="btn btn-primary" href="#story">Our story</a>
+<a class="btn btn-primary" href="https://youtu.be/vmf1XMxX4UQ" data-modal="vmf1XMxX4UQ" target="_blank" rel="noopener">Our story</a>
 </div></div></section>
 
 <section class="final" id="find"><div class="wrap">
@@ -360,6 +364,7 @@ footer li a{text-decoration:none;color:rgba(255,255,255,.72)}footer li a:hover{c
 <div class="copy">© 2026 Smart Refill</div>
 </div></footer>
 
+<dialog id="vmodal" aria-label="Our story video"><button class="vclose" type="button" aria-label="Close video">&times;</button><div class="vframe"></div></dialog>
 <script>
 (function(){
 var f=document.getElementById('lead'),ok=document.getElementById('ok'),t=document.getElementById('type');
@@ -390,6 +395,17 @@ if(!ok){window.open('https://youtu.be/'+id,'_blank','noopener');return}
 var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';f.title=b.getAttribute('aria-label');
 f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.referrerPolicy='strict-origin-when-cross-origin';
 b.replaceWith(f);});});
+var dlg=document.getElementById('vmodal'),fr=dlg.querySelector('.vframe');
+document.querySelectorAll('[data-modal]').forEach(function(a){a.addEventListener('click',function(e){
+var ok=/^https?:$/.test(location.protocol)&&!/claude|anthropic/.test(location.hostname);
+if(!ok||!dlg.showModal)return;
+e.preventDefault();var f=document.createElement('iframe');
+f.src='https://www.youtube-nocookie.com/embed/'+a.dataset.modal+'?autoplay=1&rel=0';f.title='Our story video';
+f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.referrerPolicy='strict-origin-when-cross-origin';
+fr.innerHTML='';fr.appendChild(f);dlg.showModal();});});
+dlg.addEventListener('close',function(){fr.innerHTML=''});
+dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+dlg.querySelector('.vclose').addEventListener('click',function(){dlg.close()});
 })();
 </script>
 </body>
