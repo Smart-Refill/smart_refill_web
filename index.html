@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Smart Refill | Refill Machines for Everyday Essentials</title>
+<meta name="description" content="Smart Refill machines let you refill laundry liquid, dishwash, floor cleaner and handwash at a refill station near you. Reuse your bottle, cut plastic.">
+<link rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAYFBMVEUA+sUA+MMA9sIA8cAA7r4B7L0A7L0B670C6rwA6rsC6bsC6boD5LgJzq0TsZ0ejYksZXQ4QmFALVZCKlVCKlRDKVRDKFNCKVRDJ1NCJ1NDJlJEI1FFIE9GHU5HG0xIGEteXmZpAAADYklEQVR42t1X25ajIBBE0cgQQS4REkD5/7/cxmQiGqPZ2Zfd5Zx5yUjZXV1d3aLrHx70zwO4vxvApPMzAGO17p1Px1ltfw8ALvd+iDFYJaVUdoihtx8DGG3hclBSdJy16TDeyTBczCcAvTYhDgruthihEuOqqjAu0ImL0dkPAEIMUqTLJW4oJaRJh1DalLi7eXsEYJzs+BkVmFDS1ItDCeJqGyEDuAwc4RO8r944FHHvzD6Ajl1xrt+dM+qi3u8FPYqCvAWoSSUHuwtgg9y5X9OCj/sAximGmx2Iswxmt537wMs5hoYS+GtyHjdZyACARUSf9ytUVhhVMwIp+BYJOQCwSJ/3205I2bX4GVODmdqoZAZgB1k9X1eyOIYQZTvHUNEtEjIA41X7zSJEIL22Ks+KYLGRQ94LJmPx/rTxEMIclRgvuwB6nN7X0IzzG3uyQIpDgCgAAPg/0ST+US9LCxEcpAAs4qbBbfdVEFoyv9bGSYYDDlLGtBBR8hLXrfImTwGQp192B4tjGCSvwiAYwtA8fZDn6mMhJRY5YvAaa8dbVwGLuTgpEqM+AoDn709pF6UMepiFBNKyzhwAXKL4bhijvdfBspnCaquILxyoJPc0Vq4+DEHxZ3MQzII5ns7GXbV1MBlGD52kBJo9jpTbnrYaLL2Pg71PlQqJyMusv4k8rEJSQrpbwlgBQXQRTO7ZjJO0jnRwGQVMlQqGCWnABP2YNeMbS1oCgLGeyWOsTAbiWO5yoC19RGJurET61B0zj3hDCisS7ZBVDvp/4SibSawAltqFx72aDeGOqfcBMmOlqXvgh4wF8tqR6xSCPGUpG2cu0GB5Enwl6PWGsjLWYHqfOzOoQSxpWO9IZulhMA7B6Io5hAnV7gC8sLiszMTMoqteAUQGMBlrUlfdvKvlGsBm0iF3Y10OzZqQc57ECwfAYjWz+CiaZ9CWsHBBk9S4RDz0O9u6n+WfxG+n9SlNTdj5oE0rxoXaW/fzuoOP3tOFJEpC09IppBpHvweQJdy0BX8o193S2mvCGAd30XtVuNpRYJqSpQ0sqfxBl3EhBO96ra05+GIBU/oqcVmgYsrWPYGt/cBUp2gtZ+w7W/eTbybnzC0ZM2R7MT8BAIhpNNjj2//Fd+N/CuDcqqZvP/nSv34BrgI1B5WbK84AAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#330e42;--green:#330e42;--sage:#e3f9fa;--bg:#ffffff;--surface:#ffffff;--ink:#330e42;--muted:#6b5a75;--line:rgba(51,14,66,.14);--on-forest:#ffffff;
+--head:'Manrope',system-ui,sans-serif;--body:'DM Sans',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d0626;--surface:#330e42;--ink:#ffffff;--muted:#c9b8d1;--line:rgba(255,255,255,.16);--sage:#2a0b37;--green:#5ce1e6}}
+:root[data-theme="dark"]{--bg:#1d0626;--surface:#330e42;--ink:#ffffff;--muted:#c9b8d1;--line:rgba(255,255,255,.16);--sage:#2a0b37;--green:#5ce1e6}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#330e42;z-index:60}
+h1,h2,h3{font-family:var(--head);letter-spacing:-.03em;line-height:1.05;margin:0}
+h1{font-size:clamp(2.6rem,7vw,5.2rem);font-weight:800}
+h2{font-size:clamp(2rem,4.6vw,3.4rem);font-weight:800}
+h3{font-size:1.2rem;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:clamp(72px,10vw,128px) 0}
+.lead{color:var(--muted);max-width:46ch;font-size:1.15rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:999px;font:700 .98rem var(--head);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:#5ce1e6;color:#330e42;border-color:rgba(51,14,66,.12)}.btn-primary:hover{background:#8aeef1}
+.btn-ghost{border-color:var(--line);color:var(--ink)}.btn-ghost:hover{border-color:var(--green);color:var(--green)}
+.btn-light{background:#5ce1e6;color:#330e42}.btn-light:hover{background:#8aeef1}
+.btn-line{border-color:rgba(255,255,255,.4);color:var(--on-forest)}.btn-line:hover{background:rgba(255,255,255,.1)}
+/* nav */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:#330e42;border-bottom:1px solid rgba(255,255,255,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font:800 1.2rem var(--head);letter-spacing:-.03em;text-decoration:none}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-size:.95rem;color:rgba(255,255,255,.75)}.nav ul a:hover{color:#fff}
+.logo img{height:36px;width:auto;display:block}.logo img.sq{height:112px;width:112px;border-radius:14px}
+.nav .btn{min-height:42px;padding:0 18px;font-size:.9rem}
+@media(max-width:900px){.nav ul{display:none}}
+@media(max-width:480px){.nav .btn{padding:0 14px;font-size:.82rem}}
+/* hero */
+.hero{padding:clamp(40px,7vw,88px) 0 clamp(56px,8vw,104px)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{margin-bottom:24px}
+.hero .lead{margin-bottom:36px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.stage{background:var(--sage);border-radius:32px;padding:32px 24px 0;display:flex;justify-content:center;overflow:hidden;aspect-ratio:4/5}
+.stage svg{width:100%;max-width:380px;height:100%}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.stage{aspect-ratio:1/1}}
+.fillline{animation:fill 5s ease-in-out .6s infinite}
+.drop{animation:drop 5s ease-in .6s infinite}
+.liq{transform-origin:bottom;transform-box:fill-box;animation:rise 5s ease-in-out .6s infinite}
+.pulse{animation:pulse 5s ease-in-out .6s infinite}
+@keyframes rise{0%{transform:scaleY(0)}60%,90%{transform:scaleY(1)}100%{transform:scaleY(0)}}
+@keyframes drop{0%{opacity:0}5%,58%{opacity:1}62%,100%{opacity:0}}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes fill{0%{opacity:0}}
+/* problem */
+.problem{background:var(--forest);color:var(--on-forest)}
+.problem h2{max-width:16ch}
+.cycle{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:64px;border-top:1px solid rgba(255,255,255,.2)}
+.cycle div{padding:24px 20px 0 0}
+.cycle b{display:block;font:700 1.1rem var(--head);margin-bottom:6px}
+.cycle span{color:rgba(255,255,255,.7);font-size:.95rem}
+.problem .lead{color:rgba(255,255,255,.75);margin-top:24px}
+@media(max-width:760px){.cycle{grid-template-columns:1fr 1fr}.cycle div{padding-bottom:20px}}
+/* steps */
+.head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
+.head h2{max-width:18ch}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:32px 28px;counter-increment:s}
+.step::before{content:"0" counter(s);display:block;font:800 3.2rem var(--head);color:var(--green);opacity:.9;margin-bottom:40px;letter-spacing:-.04em}
+.step h3{margin-bottom:8px}.step p{color:var(--muted)}
+@media(max-width:860px){.steps{grid-template-columns:1fr}}
+.demo{padding-top:0}
+.video{position:relative;aspect-ratio:16/9;border-radius:28px;overflow:hidden;background:var(--forest);border:1px solid var(--line)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.demo .links{margin-top:18px;color:var(--muted);font-size:.95rem}
+.demo .links a{color:var(--green);font-weight:500}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tgrid .video{border-radius:20px}
+@media(max-width:860px){.tgrid{grid-template-columns:1fr}}
+.vplay{position:absolute;inset:0;width:100%;height:100%;border:0;background:#330e42;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;cursor:pointer;font:700 1rem var(--head);transition:background .2s}.vplay:hover{background:#3f1553}.vplay svg{transition:transform .2s}.vplay:hover svg{transform:scale(1.08)}
+.wa-fab{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:45;width:58px;height:58px;border-radius:50%;background:#5ce1e6;color:#330e42;display:grid;place-items:center;box-shadow:0 8px 24px rgba(51,14,66,.35);transition:transform .2s}.wa-fab:hover{transform:scale(1.08)}
+.contact{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.contact .btn{gap:10px}
+/* seo */
+.def{padding:0 0 clamp(56px,8vw,96px)}.def h2{font-size:clamp(1.6rem,3vw,2.2rem)}.def p{font-size:1.2rem;max-width:62ch;margin-top:16px}
+.faq .wrap{max-width:820px}.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{cursor:pointer;font:700 1.1rem var(--head);list-style:none;display:flex;justify-content:space-between;gap:16px;letter-spacing:-.01em}
+.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";color:var(--green);font-size:1.5rem;line-height:1;flex:none}
+.faq details[open] summary::after{content:"\2013"}.faq details p{color:var(--muted);margin-top:10px;max-width:62ch}
+.soc{display:inline-flex;align-items:center;gap:10px}
+/* machines */
+.machines{background:var(--sage)}
+.m-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.panel{background:var(--surface);border-radius:28px;padding:36px;display:flex;justify-content:center}
+.panel svg{width:100%;max-width:300px}
+.feat{list-style:none;padding:0;margin:28px 0 36px;display:grid;gap:0}
+.feat li{padding:14px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:baseline}
+.feat li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);flex:none;transform:translateY(-2px)}
+@media(max-width:860px){.m-grid{grid-template-columns:1fr;gap:36px}}
+/* impact */
+.impact{background:var(--surface);border-block:1px solid var(--line)}
+.imp-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.imp-list{list-style:none;margin:32px 0 0;padding:0}
+.imp-list li{font:700 1.5rem var(--head);letter-spacing:-.02em;padding:16px 0;border-bottom:1px solid var(--line)}
+.swap{display:flex;align-items:end;justify-content:center;gap:28px;background:var(--bg);border-radius:28px;padding:48px 24px}
+.swap .x{opacity:.35;filter:grayscale(1)}
+.swap small{display:block;text-align:center;margin-top:10px;color:var(--muted);font-size:.85rem}
+@media(max-width:860px){.imp-grid{grid-template-columns:1fr;gap:36px}}
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--green)}
+.why div{padding:28px 24px 0 0}
+.why h3{margin-bottom:10px}.why p{color:var(--muted);font-size:.98rem}
+@media(max-width:860px){.why{grid-template-columns:1fr 1fr}.why div{padding-bottom:28px}}
+/* community */
+.comm{background:var(--forest);color:var(--on-forest)}
+.comm-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.comm .lead{color:rgba(255,255,255,.78);margin:24px 0 36px}
+.club{background:rgba(255,255,255,.07);border-radius:28px;padding:40px;display:flex;justify-content:center}
+.club svg{width:100%;max-width:420px}
+@media(max-width:860px){.comm-grid{grid-template-columns:1fr;gap:36px}}
+/* partner */
+.p-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px}
+.who{list-style:none;padding:0;margin:28px 0 0}
+.who li{padding:12px 0;border-bottom:1px solid var(--line)}
+form{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{display:grid;gap:6px;font:700 .85rem var(--head)}
+label.full,form .btn,.ok{grid-column:1/-1}
+input,select{font:400 1rem var(--body);min-height:48px;padding:0 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+input:focus,select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px color-mix(in srgb,var(--green) 25%,transparent)}
+.err{color:#b3261e;font:400 .8rem var(--body);min-height:1em}
+@media(prefers-color-scheme:dark){.err{color:#ff8a80}}
+.ok{display:none;background:var(--sage);color:var(--forest);border-radius:14px;padding:16px 18px;font-weight:500}
+@media(prefers-color-scheme:dark){.ok{color:var(--ink)}}
+.ok.show{display:block}.ok.bad{background:#fde7e5;color:#8c1d18}
+@media(max-width:860px){.p-grid{grid-template-columns:1fr;gap:36px}form{grid-template-columns:1fr;padding:22px}}
+/* story */
+.story{background:var(--sage)}
+.story .col{max-width:760px}
+.story p{font-size:1.2rem;margin:28px 0 36px;color:var(--ink)}
+/* final */
+.final{background:var(--forest);color:var(--on-forest);text-align:center}
+.final h2{max-width:18ch;margin:0 auto 20px}
+.final p{color:rgba(255,255,255,.78);margin-bottom:36px}
+.final .cta-row{justify-content:center}
+footer{padding:64px 0 40px;background:#330e42;color:#fff;border-top:1px solid rgba(255,255,255,.12)}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+footer p{color:rgba(255,255,255,.72);margin-top:12px;max-width:32ch}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+footer li a{text-decoration:none;color:rgba(255,255,255,.72)}footer li a:hover{color:#5ce1e6}
+.copy{margin-top:48px;color:rgba(255,255,255,.6);font-size:.85rem}
+@media(max-width:700px){.f-grid{grid-template-columns:1fr 1fr}.f-grid>div:first-child{grid-column:1/-1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.liq{transform:scaleY(1)}.drop{opacity:0}}
+</style>
+<meta name="keywords" content="refill, smart refill, refill machine, refill station, refill station near me, vending machine, refill vending machine, refillable, reusable packaging, reuse, sustainable packaging, sustainable solutions, zero waste, plastic free, reduce single-use plastic, plastic-free home, liquid detergent refill, laundry liquid refill, dishwash refill, floor cleaner refill, handwash refill, refill your own bottle, bring your own container, refill machine for apartments, housing society refill machine, RWA sustainability, sustainable solutions for residential communities">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="#330e42">
+<meta name="geo.region" content="IN">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Smart Refill"><meta property="og:locale" content="en_IN">
+<meta property="og:title" content="Smart Refill | Refill Machines for Everyday Essentials"><meta property="og:description" content="Smart Refill machines let you refill laundry liquid, dishwash, floor cleaner and handwash at a refill station near you. Reuse your bottle, cut plastic.">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Smart Refill | Refill Machines for Everyday Essentials"><meta name="twitter:description" content="Smart Refill machines let you refill laundry liquid, dishwash, floor cleaner and handwash at a refill station near you. Reuse your bottle, cut plastic.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "#org", "name": "Smart Refill", "description": "Smart Refill operates automated refill machines for everyday household essentials such as laundry liquid, dishwash liquid, floor cleaner and handwash, placed in residential communities and high-footfall locations in India.", "telephone": "+918762641691", "areaServed": {"@type": "Country", "name": "India"}, "contactPoint": {"@type": "ContactPoint", "telephone": "+918762641691", "contactType": "customer service", "areaServed": "IN", "availableLanguage": ["English"]}, "knowsAbout": ["refill machines", "refillable household products", "reusable packaging", "reducing single-use plastic packaging", "sustainable packaging", "zero-waste habits", "refill stations", "liquid detergent refills", "reducing single-use plastic", "solutions for housing societies and RWAs"], "sameAs": ["https://www.instagram.com/smart_refill/", "https://www.linkedin.com/company/smart_refill"]}, {"@type": "WebSite", "name": "Smart Refill", "description": "Smart Refill machines let you refill laundry liquid, dishwash, floor cleaner and handwash at a refill station near you. Reuse your bottle, cut plastic.", "inLanguage": "en-IN", "publisher": {"@id": "#org"}}, {"@type": "Service", "name": "Smart Refill refill machines", "serviceType": "Refill vending machine service", "description": "Automated self-service refill machines where customers refill their own bottles with household cleaning and personal care liquids and pay for the quantity dispensed.", "provider": {"@id": "#org"}, "areaServed": {"@type": "Country", "name": "India"}, "audience": {"@type": "Audience", "audienceType": "Households, residential communities, housing societies, developers, retail spaces and institutions"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Smart Refill?", "acceptedAnswer": {"@type": "Answer", "text": "Smart Refill is a network of automated refill machines for everyday household essentials such as laundry liquid, dishwash liquid, floor cleaner and handwash. You bring your own bottle, refill the quantity you need and pay only for what is dispensed."}}, {"@type": "Question", "name": "What is a refill station?", "acceptedAnswer": {"@type": "Answer", "text": "A refill station is a machine where you refill your own bottle with a household liquid instead of buying a new packaged one. Smart Refill machines work this way for laundry liquid, dishwash, floor cleaner and handwash."}}, {"@type": "Question", "name": "How does a Smart Refill machine work?", "acceptedAnswer": {"@type": "Answer", "text": "Bring your existing bottle or reusable container, choose your product and quantity at the machine, then pay for the quantity dispensed. There is no new packaging to buy and no complicated process."}}, {"@type": "Question", "name": "Can I refill laundry detergent, dishwash and handwash?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Smart Refill machines are designed for liquid laundry detergent, dishwash liquid, floor cleaner, handwash and other household essentials. Availability varies by machine and location."}}, {"@type": "Question", "name": "Do I need to buy a special bottle?", "acceptedAnswer": {"@type": "Answer", "text": "No. You can bring a bottle or reusable container you already have."}}, {"@type": "Question", "name": "How is refill pricing decided?", "acceptedAnswer": {"@type": "Answer", "text": "Pricing is based on the quantity you dispense, so you pay for what you need instead of a fixed pack size."}}, {"@type": "Question", "name": "How can I reduce plastic waste at home?", "acceptedAnswer": {"@type": "Answer", "text": "One simple step is to reuse the bottles you already have. Refilling household liquids such as laundry liquid, dishwash and handwash in your own container means fewer single-use bottles to throw away."}}, {"@type": "Question", "name": "Does refilling reduce plastic packaging?", "acceptedAnswer": {"@type": "Answer", "text": "Refilling lets you reuse a container you already own instead of buying a new single-use bottle each time, which means less single-use packaging. Smart Refill does not claim that any product is organic, chemical-free or 100% environmentally safe."}}, {"@type": "Question", "name": "Is Smart Refill zero waste or plastic free?", "acceptedAnswer": {"@type": "Answer", "text": "Not on its own. Smart Refill is one practical step towards zero-waste and plastic-free habits, using reusable packaging in place of repeated single-use bottles. We publish impact figures only when they are verified."}}, {"@type": "Question", "name": "Where can I find a refill station near me?", "acceptedAnswer": {"@type": "Answer", "text": "Machines are placed in residential communities and high-footfall locations. To ask about a station near you, use the enquiry form on this page, message us on WhatsApp or call +91 87626 41691."}}, {"@type": "Question", "name": "Can my apartment, housing society or RWA get a refill machine?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, you can enquire. Resident welfare associations, housing societies, facility managers, property developers, retail spaces, institutions and brand partners can reach us through the Partner With Us form, WhatsApp or phone."}}, {"@type": "Question", "name": "What is reusable packaging?", "acceptedAnswer": {"@type": "Answer", "text": "Reusable packaging is a container that is used many times instead of being thrown away after one use. With Smart Refill, your own bottle becomes the reusable packaging: you refill it instead of replacing it."}}]}]}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="ig" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" fill="currentColor"/></symbol>
+<symbol id="li" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/></symbol>
+<symbol id="wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="currentColor"/></symbol>
+<symbol id="bottle" viewBox="0 0 60 120"><rect x="22" y="2" width="16" height="12" rx="3" fill="currentColor" opacity=".55"/><path d="M20 14h20l8 18v78a8 8 0 0 1-8 8H20a8 8 0 0 1-8-8V32z" fill="currentColor"/><rect x="18" y="56" width="24" height="30" rx="4" fill="#fff" opacity=".7"/></symbol>
+</defs>
+</svg>
+
+<header>
+<div class="wrap nav">
+<a class="logo" href="#top" aria-label="Smart Refill home"><img src="data:image/png;base64,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" alt="Smart Refill" width="115" height="36"></a>
+<nav aria-label="Main"><ul>
+<li><a href="#top">Home</a></li><li><a href="#how">How it works</a></li><li><a href="#demo">Demo</a></li><li><a href="#impact">Our impact</a></li><li><a href="#partner">Partner with us</a></li><li><a href="#story">About</a></li>
+</ul></nav>
+<a class="btn btn-primary" href="#find">Find a refill station</a>
+</div>
+</header>
+
+<a class="wa-fab" href="https://wa.me/918762641691?text=Hi%20Smart%20Refill%2C%20I%27d%20like%20to%20know%20more." target="_blank" rel="noopener" aria-label="Chat with Smart Refill on WhatsApp"><svg width="30" height="30"><use href="#wa"/></svg></a>
+<main id="top">
+<section class="hero"><div class="wrap hero-grid">
+<div>
+<h1>Everyday essentials. A smarter way to refill.</h1>
+<p class="lead">Your everyday cleaning essentials, available on demand. Refill what you need, pay for what you use, and leave unnecessary packaging behind.</p>
+<div class="cta-row"><a class="btn btn-primary" href="#machines">Discover Smart Refill</a><a class="btn btn-ghost" href="#how">How it works</a></div>
+</div>
+<div class="stage" role="img" aria-label="Illustration of a Smart Refill machine filling a customer’s own bottle">
+<svg viewBox="0 0 380 440">
+<rect x="70" y="20" width="240" height="380" rx="26" fill="#330e42"/>
+<rect x="92" y="44" width="196" height="108" rx="14" fill="#ffffff"/>
+<text x="190" y="82" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="800" font-size="17" fill="#330e42">Laundry liquid</text>
+<text x="190" y="108" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#737A75">500 ml</text>
+<rect x="132" y="122" width="116" height="10" rx="5" fill="#e4d9ea"/><rect class="pulse" x="132" y="122" width="116" height="10" rx="5" fill="#5ce1e6"/>
+<rect x="92" y="172" width="196" height="26" rx="8" fill="#5ce1e6"/>
+<rect x="160" y="198" width="60" height="30" rx="6" fill="#230830"/>
+<rect class="drop" x="188" y="228" width="4" height="70" rx="2" fill="#5ce1e6"/>
+<rect x="120" y="318" width="140" height="10" rx="5" fill="#230830"/>
+<circle cx="112" cy="372" r="6" fill="#5ce1e6" class="pulse"/>
+<rect x="140" y="270" width="100" height="130" rx="14" fill="none"/>
+<g transform="translate(150,282)">
+<path d="M20 14h20l8 18v78a8 8 0 0 1-8 8H20a8 8 0 0 1-8-8V32z" fill="none" stroke="#330e42" stroke-width="3" opacity=".0"/>
+</g>
+<g transform="translate(146,290) scale(1.3)">
+<path d="M20 4h20l8 14v42a8 8 0 0 1-8 8H20a8 8 0 0 1-8-8V18z" fill="#fff" stroke="#330e42" stroke-width="2.200"/>
+<clipPath id="bc"><path d="M20 4h20l8 14v42a8 8 0 0 1-8 8H20a8 8 0 0 1-8-8V18z"/></clipPath>
+<g clip-path="url(#bc)"><rect class="liq" x="10" y="14" width="40" height="56" fill="#5ce1e6"/></g>
+</g>
+<rect x="40" y="400" width="300" height="10" rx="5" fill="#330e42" opacity=".25"/>
+</svg>
+</div>
+</div></section>
+
+<section class="def"><div class="wrap"><h2>What is Smart Refill?</h2><p>Smart Refill is a network of automated refill machines for everyday household essentials such as laundry liquid, dishwash liquid, floor cleaner and handwash. You bring your own bottle or reusable container, choose the product and quantity, and pay only for what is dispensed, so you reuse packaging instead of buying a new single-use bottle each time. Each machine works as a neighbourhood refill station, placed in residential communities and other high-footfall locations in India.</p></div></section>
+
+<section class="problem"><div class="wrap">
+<h2>We buy the same essentials. We throw away the same packaging.</h2>
+<p class="lead">Everyday essentials are part of every home. But the packaging that comes with them doesn’t have to be.</p>
+<div class="cycle">
+<div><b>Buy</b><span>A new bottle every time</span></div>
+<div><b>Use</b><span>The same product, week after week</span></div>
+<div><b>Finish</b><span>An empty bottle on the shelf</span></div>
+<div><b>Discard</b><span>And the cycle starts again</span></div>
+</div>
+</div></section>
+
+<section id="how"><div class="wrap">
+<div class="head"><h2>A smarter way to shop for everyday essentials.</h2><p class="lead">Same products. Same routine. Less packaging.</p></div>
+<div class="steps">
+<div class="step"><h3>Bring your bottle</h3><p>Bring your existing bottle or reusable container.</p></div>
+<div class="step"><h3>Refill what you need</h3><p>Choose your product and quantity at a Smart Refill machine.</p></div>
+<div class="step"><h3>Pay and go</h3><p>Pay for the quantity dispensed. No unnecessary packaging. No complicated process.</p></div>
+</div>
+</div></section>
+
+<section class="demo" id="demo"><div class="wrap">
+<div class="head"><h2>See it in action.</h2><p class="lead">Watch a Smart Refill machine fill a customer’s own bottle.</p></div>
+<div class="video"><button type="button" class="vplay" data-yt="sdjzw_9LisE" aria-label="Play: Smart Refill demo video"><svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#5ce1e6"/><path d="M29 22l22 14-22 14z" fill="#330e42"/></svg><span>Play video</span></button></div>
+<p class="links">Video not loading? <a href="https://youtu.be/sdjzw_9LisE" target="_blank" rel="noopener">Watch it on YouTube</a>.</p>
+</div></section>
+
+<section class="machines" id="machines"><div class="wrap m-grid">
+<div class="panel" role="img" aria-label="Illustration of a Smart Refill refill vending machine">
+<svg viewBox="0 0 220 340"><rect x="20" y="10" width="180" height="300" rx="22" fill="#330e42"/><rect x="38" y="28" width="144" height="86" rx="12" fill="#ffffff"/><rect x="52" y="46" width="70" height="8" rx="4" fill="#330e42"/><rect x="52" y="64" width="116" height="6" rx="3" fill="#e4d9ea"/><rect x="52" y="82" width="52" height="16" rx="8" fill="#5ce1e6"/><rect x="38" y="130" width="144" height="22" rx="8" fill="#5ce1e6"/><rect x="88" y="152" width="44" height="20" rx="5" fill="#230830"/><rect x="38" y="262" width="144" height="30" rx="8" fill="#230830"/><rect x="10" y="310" width="200" height="10" rx="5" fill="#330e42" opacity=".25"/></svg>
+</div>
+<div>
+<h2>Meet your neighbourhood refill station.</h2>
+<p class="lead" style="margin-top:18px">Each refill machine dispenses laundry liquid, dishwash liquid, floor cleaner, handwash and other household essentials. Availability varies by machine and location.</p>
+<ul class="feat">
+<li>Automated self-service dispensing</li>
+<li>Transparent quantity-based pricing</li>
+<li>Easy-to-use interface</li>
+<li>Refill using your reusable containers</li>
+<li>Located in residential communities and neighbourhoods</li>
+</ul>
+<a class="btn btn-primary" href="#find">Find Smart Refill near you</a>
+</div>
+</div></section>
+
+<section class="impact" id="impact"><div class="wrap imp-grid">
+<div>
+<h2>Small refills. A bigger difference.</h2>
+<ul class="imp-list"><li>Less single-use packaging</li><li>More reuse in everyday life</li><li>Smarter consumption habits</li><li>Convenient sustainable choices</li></ul>
+<p style="margin-top:24px;color:var(--muted);max-width:48ch">Smart Refill is built around reusable packaging: refill the same bottle again instead of buying a new single-use one. It is a practical step towards zero-waste and plastic-free habits at home, and a simple way to reduce single-use plastic.</p>
+</div>
+<div class="swap" role="img" aria-label="One reusable bottle replacing three disposable bottles">
+<div class="x"><svg width="44" height="88" viewBox="0 0 60 120" style="color:#737A75"><use href="#bottle"/></svg></div>
+<div class="x"><svg width="44" height="88" viewBox="0 0 60 120" style="color:#737A75"><use href="#bottle"/></svg></div>
+<div><svg width="70" height="140" viewBox="0 0 60 120" style="color:#5ce1e6"><use href="#bottle"/></svg><small>Yours, again and again</small></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="head"><h2>Why Smart Refill?</h2></div>
+<div class="why">
+<div><h3>Convenience</h3><p>Refill your everyday essentials close to home.</p></div>
+<div><h3>Value</h3><p>Purchase the quantity you need.</p></div>
+<div><h3>Less packaging</h3><p>Reuse containers instead of repeatedly buying new bottles.</p></div>
+<div><h3>Smart technology</h3><p>A simple, modern, automated refill experience.</p></div>
+</div>
+</div></section>
+
+<section id="testimonials"><div class="wrap">
+<div class="head"><h2>Hear it from people who refill.</h2><p class="lead">Real customers, in their own words.</p></div>
+<div class="tgrid">
+<div class="video"><button type="button" class="vplay" data-yt="Z0ZOubILjso" aria-label="Play: Smart Refill customer testimonial 1"><svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#5ce1e6"/><path d="M29 22l22 14-22 14z" fill="#330e42"/></svg><span>Play video</span></button></div>
+<div class="video"><button type="button" class="vplay" data-yt="ePqtA2R2OYs" aria-label="Play: Smart Refill customer testimonial 2"><svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#5ce1e6"/><path d="M29 22l22 14-22 14z" fill="#330e42"/></svg><span>Play video</span></button></div>
+<div class="video"><button type="button" class="vplay" data-yt="311_S2TX0mY" aria-label="Play: Smart Refill customer testimonial 3"><svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#5ce1e6"/><path d="M29 22l22 14-22 14z" fill="#330e42"/></svg><span>Play video</span></button></div>
+</div>
+<p class="links" style="margin-top:18px;color:var(--muted);font-size:.95rem">Videos not loading? Watch on YouTube: <a href="https://youtu.be/Z0ZOubILjso" target="_blank" rel="noopener" style="color:var(--green);font-weight:500">testimonial 1</a> · <a href="https://youtu.be/ePqtA2R2OYs" target="_blank" rel="noopener" style="color:var(--green);font-weight:500">testimonial 2</a> · <a href="https://youtu.be/311_S2TX0mY" target="_blank" rel="noopener" style="color:var(--green);font-weight:500">testimonial 3</a></p>
+</div></section>
+
+<section class="comm"><div class="wrap comm-grid">
+<div>
+<h2>Make your community a smarter place to live.</h2>
+<p class="lead">Bring a smarter and more responsible shopping experience closer to your residents. Smart Refill transforms everyday essential shopping into a convenient neighbourhood experience. It works for apartments, gated communities, housing societies and RWAs.</p>
+<a class="btn btn-light" href="#partner" data-enquiry="Residential community">Bring Smart Refill to your community</a>
+</div>
+<div class="club" role="img" aria-label="Illustration of a Smart Refill machine in an apartment clubhouse">
+<svg viewBox="0 0 420 300"><rect x="0" y="40" width="420" height="200" rx="16" fill="#ffffff" opacity=".1"/><rect x="30" y="64" width="90" height="110" rx="6" fill="#5ce1e6" opacity=".25"/><rect x="300" y="64" width="90" height="110" rx="6" fill="#5ce1e6" opacity=".25"/><rect x="170" y="60" width="80" height="170" rx="14" fill="#ffffff"/><rect x="182" y="74" width="56" height="40" rx="6" fill="#330e42"/><rect x="182" y="124" width="56" height="10" rx="5" fill="#5ce1e6"/><rect x="0" y="240" width="420" height="6" fill="#ffffff" opacity=".25"/></svg>
+</div>
+</div></section>
+
+<section class="faq" id="faq"><div class="wrap"><div class="head"><h2>Questions, answered.</h2></div>
+<details><summary>What is Smart Refill?</summary><p>Smart Refill is a network of automated refill machines for everyday household essentials such as laundry liquid, dishwash liquid, floor cleaner and handwash. You bring your own bottle, refill the quantity you need and pay only for what is dispensed.</p></details><details><summary>What is a refill station?</summary><p>A refill station is a machine where you refill your own bottle with a household liquid instead of buying a new packaged one. Smart Refill machines work this way for laundry liquid, dishwash, floor cleaner and handwash.</p></details><details><summary>How does a Smart Refill machine work?</summary><p>Bring your existing bottle or reusable container, choose your product and quantity at the machine, then pay for the quantity dispensed. There is no new packaging to buy and no complicated process.</p></details><details><summary>Can I refill laundry detergent, dishwash and handwash?</summary><p>Yes. Smart Refill machines are designed for liquid laundry detergent, dishwash liquid, floor cleaner, handwash and other household essentials. Availability varies by machine and location.</p></details><details><summary>Do I need to buy a special bottle?</summary><p>No. You can bring a bottle or reusable container you already have.</p></details><details><summary>How is refill pricing decided?</summary><p>Pricing is based on the quantity you dispense, so you pay for what you need instead of a fixed pack size.</p></details><details><summary>How can I reduce plastic waste at home?</summary><p>One simple step is to reuse the bottles you already have. Refilling household liquids such as laundry liquid, dishwash and handwash in your own container means fewer single-use bottles to throw away.</p></details><details><summary>Does refilling reduce plastic packaging?</summary><p>Refilling lets you reuse a container you already own instead of buying a new single-use bottle each time, which means less single-use packaging. Smart Refill does not claim that any product is organic, chemical-free or 100% environmentally safe.</p></details><details><summary>Is Smart Refill zero waste or plastic free?</summary><p>Not on its own. Smart Refill is one practical step towards zero-waste and plastic-free habits, using reusable packaging in place of repeated single-use bottles. We publish impact figures only when they are verified.</p></details><details><summary>Where can I find a refill station near me?</summary><p>Machines are placed in residential communities and high-footfall locations. To ask about a station near you, use the enquiry form on this page, message us on WhatsApp or call +91 87626 41691.</p></details><details><summary>Can my apartment, housing society or RWA get a refill machine?</summary><p>Yes, you can enquire. Resident welfare associations, housing societies, facility managers, property developers, retail spaces, institutions and brand partners can reach us through the Partner With Us form, WhatsApp or phone.</p></details><details><summary>What is reusable packaging?</summary><p>Reusable packaging is a container that is used many times instead of being thrown away after one use. With Smart Refill, your own bottle becomes the reusable packaging: you refill it instead of replacing it.</p></details>
+</div></section>
+
+<section id="partner"><div class="wrap p-grid">
+<div>
+<h2>Let’s make refilling accessible.</h2>
+<ul class="who"><li>Residential communities, housing societies and RWAs</li><li>Real estate developers</li><li>Retail spaces</li><li>Institutions</li><li>Sustainability-focused organisations</li><li>Brand and product partners</li></ul>
+<div class="contact"><a class="btn btn-primary" href="https://wa.me/918762641691?text=Hi%20Smart%20Refill%2C%20I%27d%20like%20to%20know%20more." target="_blank" rel="noopener"><svg width="20" height="20"><use href="#wa"/></svg>Chat on WhatsApp</a><a class="btn btn-ghost" href="tel:+918762641691">Call +91 87626 41691</a></div>
+</div>
+<form id="lead" novalidate>
+<label>Name<input name="name" autocomplete="name" required><span class="err"></span></label>
+<label>Phone number<input name="phone" type="tel" inputmode="tel" autocomplete="tel" required><span class="err"></span></label>
+<label>Email<input name="email" type="email" autocomplete="email" required><span class="err"></span></label>
+<label>City<input name="city" autocomplete="address-level2" required><span class="err"></span></label>
+<label class="full">Apartment / community name<input name="community"><span class="err"></span></label>
+<label class="full">Type of enquiry<select name="type" id="type"><option>Find a refill station</option><option>Residential community</option><option>Real estate developer</option><option>Retail or institution</option><option>Brand or product partner</option><option>Other</option></select></label>
+<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+<button class="btn btn-primary" type="submit">Partner with us</button>
+<div class="ok" role="status" aria-live="polite" id="ok"></div>
+</form>
+</div></section>
+
+<section class="story" id="story"><div class="wrap"><div class="col">
+<h2>We believe better choices should be easier choices.</h2>
+<p>Smart Refill uses technology to make refilling as natural and convenient as buying new. We’re building a future where the bottle you already own is the only one you need.</p>
+<a class="btn btn-primary" href="#story">Our story</a>
+</div></div></section>
+
+<section class="final" id="find"><div class="wrap">
+<h2>The future of everyday essentials is refillable.</h2>
+<p>Join us in making everyday shopping smarter, more convenient, and more responsible.</p>
+<div class="cta-row"><a class="btn btn-light" href="#partner" data-enquiry="Find a refill station">Find a Smart Refill station</a><a class="btn btn-line" href="#partner" data-enquiry="Brand or product partner">Partner with Smart Refill</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="f-grid">
+<div><a class="logo" href="#top" aria-label="Smart Refill home"><img class="sq" src="data:image/png;base64,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" alt="Smart Refill" width="112" height="112"></a><p>Refilling everyday essentials. Rethinking everyday consumption.</p></div>
+<ul><li><a href="#story">About us</a></li><li><a href="#how">How it works</a></li><li><a href="#find">Find a machine</a></li><li><a href="#partner">Partner with us</a></li><li><a href="#partner">Contact us</a></li><li><a href="https://wa.me/918762641691?text=Hi%20Smart%20Refill%2C%20I%27d%20like%20to%20know%20more." target="_blank" rel="noopener">WhatsApp</a></li><li><a href="tel:+918762641691">+91 87626 41691</a></li></ul>
+<ul><li><a class="soc" href="https://www.instagram.com/smart_refill/" target="_blank" rel="noopener me"><svg width="20" height="20" aria-hidden="true"><use href="#ig"/></svg>Instagram</a></li><li><a class="soc" href="https://www.linkedin.com/company/smart_refill" target="_blank" rel="noopener me"><svg width="20" height="20" aria-hidden="true"><use href="#li"/></svg>LinkedIn</a></li><li><a href="#top">Privacy policy</a></li><li><a href="#top">Terms &amp; conditions</a></li></ul>
+</div>
+<div class="copy">© 2026 Smart Refill</div>
+</div></footer>
+
+<script>
+(function(){
+var f=document.getElementById('lead'),ok=document.getElementById('ok'),t=document.getElementById('type');
+document.querySelectorAll('[data-enquiry]').forEach(function(a){a.addEventListener('click',function(){t.value=a.dataset.enquiry})});
+f.addEventListener('submit',function(e){
+e.preventDefault();var bad=false;
+f.querySelectorAll('input[required]').forEach(function(i){
+var m='',v=i.value.trim();
+if(!v)m='Please fill this in.';
+else if(i.name==='email'&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v))m='Enter a valid email, like name@example.com.';
+else if(i.name==='phone'&&v.replace(/\D/g,'').length<10)m='Enter a 10-digit phone number.';
+i.nextElementSibling.textContent=m;i.setAttribute('aria-invalid',m?'true':'false');if(m)bad=true;});
+if(bad){f.querySelector('[aria-invalid="true"]').focus();return}
+var btn=f.querySelector('button[type=submit]'),label=btn.textContent,first=f.name.value.trim().split(' ')[0];
+var d={access_key:'95ded982-9dc9-470e-8fa4-e42fc1cdaefa',subject:'Smart Refill enquiry: '+f.type.value,from_name:'Smart Refill website',
+name:f.name.value.trim(),phone:f.phone.value.trim(),email:f.email.value.trim(),city:f.city.value.trim(),community:f.community.value.trim(),enquiry_type:f.type.value,botcheck:f.botcheck.checked};
+btn.disabled=true;btn.textContent='Sending…';ok.className='ok';
+fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(d)})
+.then(function(r){return r.json()}).then(function(j){
+if(!j.success)throw new Error(j.message||'failed');
+ok.textContent='Thanks, '+first+'. We’ve got your enquiry and will be in touch soon.';ok.classList.add('show');f.reset();})
+.catch(function(){ok.textContent='We couldn’t send your enquiry. Please try again, or message us on WhatsApp or call +91 87626 41691.';ok.classList.add('show','bad');})
+.finally(function(){btn.disabled=false;btn.textContent=label;});
+});
+document.querySelectorAll('.vplay').forEach(function(b){b.addEventListener('click',function(){
+var id=b.dataset.yt,ok=/^https?:$/.test(location.protocol)&&!/claude|anthropic/.test(location.hostname);
+if(!ok){window.open('https://youtu.be/'+id,'_blank','noopener');return}
+var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';f.title=b.getAttribute('aria-label');
+f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.referrerPolicy='strict-origin-when-cross-origin';
+b.replaceWith(f);});});
+})();
+</script>
+</body>
+</html>
